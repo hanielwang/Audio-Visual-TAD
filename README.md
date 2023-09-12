@@ -14,7 +14,7 @@ This repository is based on [ActionFormer](https://github.com/happyharrycn/actio
 When using this code, kindly reference:
 
 ```
-@INPROCEEDINGS{HanyuanRefining2022,
+@INPROCEEDINGS{Hanaudiovisual,
   author={Wang, Hanyuan and Mirmehdi, Majid and Damen, Dima and Perrett, Toby}
   booktitle={The 1st Workshop in Video Understanding and its Applications (VUA 2023)},
   title={Centre Stage: Centricity-based Audio-Visual Temporal Action Detection},
