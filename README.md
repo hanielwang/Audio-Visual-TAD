@@ -1,4 +1,4 @@
-# Refining Boundary Head
+# Audio-Visual Temporal Action Detection
 
 This repository implements the boundaries head proposed in the paper:
 
