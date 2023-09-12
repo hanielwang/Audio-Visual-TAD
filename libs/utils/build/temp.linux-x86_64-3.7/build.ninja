@@ -1,0 +1,20 @@
+ninja_required_version = 1.3
+cxx = /sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/bin/x86_64-conda_cos6-linux-gnu-c++
+
+cflags = -DNDEBUG -fwrapv -O2 -Wall -Wstrict-prototypes -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/include -fPIC -I/sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/lib/python3.7/site-packages/torch/include -I/sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/lib/python3.7/site-packages/torch/include/torch/csrc/api/include -I/sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/lib/python3.7/site-packages/torch/include/TH -I/sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/lib/python3.7/site-packages/torch/include/THC -I/sw/lang/anaconda.3.7-2019.03-pytorch.1.2.0/include/python3.7m -c
+post_cflags = -fopenmp -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=nms_1d_cpu -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++14
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+
+
+build /user/work/dm19329/scratch/actionformer_release_three_heads2_11.11/libs/utils/build/temp.linux-x86_64-3.7/./csrc/nms_cpu.o: compile /user/work/dm19329/scratch/actionformer_release_three_heads2_11.11/libs/utils/csrc/nms_cpu.cpp
+
+
+
+
+
