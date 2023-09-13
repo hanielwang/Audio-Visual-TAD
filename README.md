@@ -2,7 +2,7 @@
 
 This repository implements the boundaries head proposed in the paper:
 
-Hanyuan Wang, Majid Mirmehdi, Dima Damen, Toby Perrett, **Centre Stage: Centricity-based Audio-Visual Temporal Action Detection**, 2023
+Hanyuan Wang, Majid Mirmehdi, Dima Damen, Toby Perrett, **Centre Stage: Centricity-based Audio-Visual Temporal Action Detection**, VUA, 2023
 
 
 This repository is based on [ActionFormer](https://github.com/happyharrycn/actionformer_release).
